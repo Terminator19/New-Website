@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <link rel="stylesheet" href="video_style.css">
+   <script src="https://kit.fontawesome.com/0e05c28199.js" crossorigin="anonymous"></script>
+   <title>Video player</title>
+ </head>
+ <body>
+<div class="container" >
+    <div class="video_player">
+      <div id="error" class="errorvid" style="display: none;"><i style="margin-right: 10px;color: black;" class="fa-solid fa-film"></i>  This video is unavailable</div>
+        <video id="videoplayer" class="video" poster="components/img/movies_img/lego movie 2.jpg" preload="metadata" style="display: flex;">
+        
+        </video>
+        <div class="start_button" id="FirstPlayBtn"><i class="fa-sharp fa-solid fa-circle-play "></i></div>
+        <div class="load_spinicon" id="spin"><i style="color: black;" class="fa-solid fa-spinner fa-spin-pulse"></i></div>
+        <div class="text-subtitle" style="font-family:'Trebuchet MS';font-weight:normal;"  id="subtitles" ></div>
+          <div class="controls"  id="controls-all" >
+          <script src="controls.js"></script></div>
+        
+    </div>
+    </div>
+ </body>
+
+   <script>
+
+
+   </script>
+      <script src="https://cdn.jsdelivr.net/npm/hls.js" sourceMap="false" crossorigin="anonymous"></script>
+      <script src="script.js"></script>
+      <script src="controls-system.js"></script>
+ </body>
+</html>
