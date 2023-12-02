@@ -114,10 +114,12 @@ if($_GET["akce"] == "odhlasit") {
           <div class="card-body" style="display:block;">
             
             <div class="container-gallery card" style="flex-direction: row;">
-         
-           
+         <div class="card-body" style="width:100%;height:auto;">
+            <div class="ratio ratio-16x9">
+            <iframe width="1280" height="720" style="border-radius:0.375rem;" src="https://www.youtube.com/embed/jY2NOnIcpaY" title="Núdzový let (6.11.2018 o 20:40 na PLUSke)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
         
-     
+</div>
               <div   style="height: 341px;margin-left: 10px; ">
                 <div class="card-body scroll" style="padding: 10px;align-items: normal;overflow-y: scroll;scrollbar-width: none;">
                 <div class="card" style="margin-bottom: 5px;">
