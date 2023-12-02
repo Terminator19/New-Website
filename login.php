@@ -107,7 +107,7 @@ function generateRememberToken() {
               Remember me
             </label>
           </div>   
-          <a style="textdecoration:none;" href="forgotten-account.php">Forgotten account?</a>
+          <a style="textdecoration:none;" href="forgot-password.php">Forgotten password?</a>
           <br><br>
           <input type="submit" class="btn btn-success btn-block" value="Log in" name="loginbtn">
         </form>

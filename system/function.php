@@ -195,7 +195,18 @@ $db->close();
 
 
 
+
 ////overenia/////
+if(isset($_POST['email-sendbtn'])){
+    
+}
+
+
+
+
+
+
+
 // Funkcia na overenie, či je používateľ prihlásený
 function isUserLoggedIn() {
     return isset($_SESSION['user_role']);

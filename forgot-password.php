@@ -26,27 +26,25 @@
     .form-check-input {
       margin-top: 6px;
     }
+
   </style>
 </head>
 <body style="background-image:url(pozadie.jpg); background-repeat: no-repeat; background-position: center; background-attachment: fixed; background-size: cover;">
   <div class="container">
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">
-        <h3>forgotten account</h3>
+        <h3>Forgotten password</h3>
       </div>
       <div class="card-body">
         <form method="post">
           <div class="form-group">
-            <label>Username and email</label><br>
-            <input type="email" name="name" class="form-control" placeholder="Username">
-          </div>
-
-          <br>
-          <input type="submit" class="btn btn-success btn-block" value="Log in" name="submit">
-        </form>
+            <label>Enter you email address</label>
+            <input type="email" name="email-send" class="form-control" placeholder="abc@gmail.com">
+       </div>
        
+          <input type="submit" class="btn btn-primary btn-block" value="Continue" name="email-sendbtn">
+        </form>
         <div class="text-center">
-          
         </div>
       </div>
     </div>
