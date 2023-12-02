@@ -21,6 +21,7 @@ function generateRememberToken() {
   <link href="components/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="components/css/sb-admin.css" rel="stylesheet">
   <!--<link href="style.css" rel="stylesheet">-->
+
   <style>
     * {
       color: #ADB5Bd;
@@ -29,6 +30,7 @@ function generateRememberToken() {
     
     .card {
       background-color: #212121;
+      
     }
     
     .form-control {
@@ -40,13 +42,21 @@ function generateRememberToken() {
     .form-check-input {
       margin-top: 6px;
     }
-    .alert{
+    .alert-danger{
       background-color: #2c0b0e;
       border-color: #842029;
       color: #ea868f;
      
     }
+    .alert-info{
+      background-color: #032830;
+      border-color: #087990;
+      color: #6edff6;
+     
+    }
+.card-header{
 
+}
     .btn{
   font-weight:bold;
 }
@@ -68,6 +78,14 @@ function generateRememberToken() {
               }
               echo '</div>';
             }
+
+            if (!empty($infoMessageslog)) {
+              echo '<div class="alert alert-info" role="alert">';
+              foreach ($infoMessageslog as $infoMessagelog) {
+                  echo $infoMessagelog . '<br>';
+              }
+              echo '</div>';
+          }
             ?>
               <label>Username</label><br>
           <div class="form-group">

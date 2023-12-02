@@ -120,7 +120,7 @@ if($_GET["akce"] == "odhlasit") {
 </div>
         
 </div>
-              <div   style="height: 341px;margin-left: 10px; ">
+              <div   style="height: 341px;margin-left: 10px;overflow-y: auto;width: 500px; ">
                 <div class="card-body scroll" style="padding: 10px;align-items: normal;overflow-y: scroll;scrollbar-width: none;">
                 <div class="card" style="margin-bottom: 5px;">
                     <div class="card-body" style="padding: 10px; align-items: normal; flex-direction: row; flex: none;">

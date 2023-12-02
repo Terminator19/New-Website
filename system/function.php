@@ -98,17 +98,20 @@ if (isset($_POST['loginbtn'])) {
         $errorMessageslog[] = "Všetky polia musia byť vyplnené.";
     } else {
         // Pripravenie dotazu s použitím prepared statements
-        $sql = "SELECT id, password, role FROM users WHERE name = ?";
+        $sql = "SELECT id, password, role, over_email FROM users WHERE name = ?";
         $stmt = $db->prepare($sql);
         $stmt->bind_param("s", $username);
         $stmt->execute();
         $stmt->store_result();
 
         if ($stmt->num_rows == 1) {
-            $stmt->bind_result($id_user, $stored_password, $user_role);
+            $stmt->bind_result($id_user, $stored_password, $user_role,$over_email);
             $stmt->fetch();
 
-            if (password_verify($password, $stored_password)) {
+            if ($over_email == 'no') {
+                $infoMessageslog[] = "Váš účet ešte nebol overený. Prosím, overte svoj email. <a href='over.php'>Overiť</a>";
+                // Tu môžeš pridať link na stránku pre overenie emailu, ak chceš
+            } elseif (password_verify($password, $stored_password)) {
                 // Heslo je správne, nastavíme údaje do relácie
                 $_SESSION['user_role'] = $user_role;
                 $_SESSION['user_id'] = $id_user;
