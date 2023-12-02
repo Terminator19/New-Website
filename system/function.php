@@ -190,16 +190,45 @@ function deleteRememberTokenFromDatabase($username, $db) {
 
 
 
-$db->close();
 
 
 
 
 
 ////overenia/////
+//Email
 if(isset($_POST['email-sendbtn'])){
-    
+    $email_send = $_POST["email-send"];
+
+    if (empty($email_send)) {
+        $errorMessageslog[] = "Všetky polia musia byť vyplnené.";
+    } else {
+
+        // Sanitizácia vstupu (ochrana pred SQL injection)
+        $email = mysqli_real_escape_string($db, $email_send);
+
+        // Kontrola, či email existuje v databáze
+        $query = "SELECT * FROM users WHERE email = '$email'";
+        $result = mysqli_query($db, $query);
+
+        if (mysqli_num_rows($result) > 0) {
+            // Email existuje v databáze, takže môžeš posielať mail
+            $to = $email; // Emailová adresa, kam sa má poslať mail
+            $subject = "Predmet emailu";
+            $message = "Tvoja správa";
+
+            // Tu môžeš použiť funkciu mail() na odoslanie emailu
+            // mail($to, $subject, $message);
+
+            // Tu môžeš pridať správu, že bol email úspešne odoslaný
+            $successMessageslog[] = "We´ve sent a password reset otp to your email - $email";
+        } else {
+            // Ak email neexistuje v databáze
+            $errorMessageslog[] = "This email address does not exist!";
+        }
+    }
 }
+
 
 
 
@@ -272,6 +301,7 @@ if (isUserRegular()) {
 
 */ 
 
+$db->close();
 
 
 ?>
