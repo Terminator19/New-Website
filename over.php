@@ -25,7 +25,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #4070f4;
+  background-image:url(pozadie.jpg) ;
 }
 :where(.container, form, .input-field, header) {
   display: flex;
