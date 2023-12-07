@@ -1,4 +1,4 @@
-<?php 
+<?php /*
 $host = $_SERVER['HTTP_HOST'];
 
 if ($host == 'localhost') {
@@ -16,5 +16,36 @@ if ($host == 'localhost') {
         die("Pripojenie zlyhalo");
     }
 }
+*/
 
+class Database {
+    private $db;
+
+    public function __construct() {
+        $this->connect();
+    }
+
+    private function connect() {
+        $host = $_SERVER['HTTP_HOST'];
+
+        if ($host == 'localhost') {
+            $this->db = mysqli_connect("localhost", "root", "", "numplaywzsk2265");
+            $this->checkConnection();
+        } else {
+            $this->db = mysqli_connect("sql2.webzdarma.cz", "numplaywzsk2265", "Vlado9", "numplaywzsk2265");
+            $this->checkConnection();
+        }
+    }
+
+    private function checkConnection() {
+        if (!$this->db) {
+            die("Pripojenie zlyhalo");
+            
+        }
+    }
+
+    public function conDB() {
+        return $this->db;
+    }
+}
 ?>
