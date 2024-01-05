@@ -1,4 +1,4 @@
-<?php /*
+<?php 
 $host = $_SERVER['HTTP_HOST'];
 
 if ($host == 'localhost') {
@@ -16,8 +16,8 @@ if ($host == 'localhost') {
         die("Pripojenie zlyhalo");
     }
 }
-*/
 
+/*
 class Database {
     private $db;
 
@@ -47,5 +47,5 @@ class Database {
     public function conDB() {
         return $this->db;
     }
-}
+}*/
 ?>
